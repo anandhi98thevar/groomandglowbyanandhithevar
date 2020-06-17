@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>GroomandGlow</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #F08080	;
+  font-family: Arial, Helvetica, sans-serif;
+    text-emphasis: bold
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: gainsboro;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  left: 0;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content .header {
+  background:#F08080;
+  padding: 1px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+  background-color: white;
+  height: 250px;
+}
+
+.column a {
+  float: none;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.column a:hover {
+  background-color:#F08080;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ .menu-log {
+            right: auto;
+            float: right;
+        }
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+    .book{
+        background-color:lightcoral;
+        position: relative;
+        width:35%;
+        color:snow;
+        height:60%;
+        float: right;
+        padding-left: 5px;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        padding-right: 5px;
+        display: block;
+        right: 60px;
+       bottom: 5px;
+        
+    }
+input[type=text],input[type=email]
+    {
+         margin-left: 30px;
+    }
+   input[type=time]
+    { margin-left: 30px;
+        height: 23px;
+        width:40%;
+    }
+    input[type=tel]
+    {
+        margin-left: 25px;
+    }
+    input[type=date]
+    {
+         margin-left: 40px;
+         width: 40%
+    }
+    input[type=radio],input[type=checkbox]
+    {
+         margin-left: 25px;
+    }
+    .select
+    {
+         margin-left: 25px;
+        height: 20px;
+    }
+    .progress,.textarea
+    {
+         
+       
+        
+  
+}
+   
+    /* Full-width input fields */
+input[type=text1], input[type=password1] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: lightcoral;
+  color: white;
+  padding-right: 20px ;
+    padding-left: 15px;
+   padding-top: 10px;
+    padding-bottom: 10px;
+     font-size: 16px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+    height:30px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: gainsboro;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+    
+    footer {
+            width: 100%;
+            bottom: 0px;
+            background-color:lightcoral;
+            color: white;
+            position: absolute;
+            padding-top:5px;
+            padding-bottom:5px;
+            text-align:center;
+            font-size:15px;
+            font-weight:bold;
+        }
+    .loginbtn
+    {
+        height: 50%;
+        color: white;
+        background-color: lightcoral
+    }
+    
+</style>
+</head>
+<body style="background-image: url(homebg.jpg)">
+
+
+ <div class="navbar">
+ <a href="home.html">HOME</a>
+  <a href="about.html">ABOUTUS</a>
+  <a href="packages.html">PACKAGES</a>
+  <a href="certificationprogram.html">PROGRAMS</a>
+  <div class="dropdown">
+    <button class="dropbtn">SERVICES
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h3>Services</h3>
+      </div>   
+      <div class="row">
+        <div class="column">
+            <center> 
+                <h3 style="color: darkblue" >Women</h3>
+                
+                <center>
+                     <a href="#">HairSpa</a>
+          <a href="#">Grooming</a>
+          <a href="#">BodySpa</a>
+                </center>
+         
+          </center>
+         
+        </div>
+        <div class="column">
+            <center>
+                <h3 style="color: darkblue">Men</h3>
+                <center>
+          <a href="#">HairSpa</a>
+          <a href="#">BodySpa</a>
+          <a href="#">Grooming</a>
+            </center>
+            </center>
+          
+        </div>
+        <div class="column">
+            <center>
+                    <h3 style="color: darkblue">Kids</h3>
+                <center> <a href="#">HairStyles</a>
+          <a href="#">Grooming</a>
+                </center>
+         </center>
+          
+        </div>
+          <div class="column">
+              <center>
+                   <h3 style="color: darkblue">Other</h3>
+                  <center>
+                      <a href="#">Wedding</a>
+          <a href="#">Customize</a>
+         <a href="#">Beauty Products</a>
+                  </center>
+          
+              </center>
+         
+          </div>
+      </div>
+    </div>
+  </div> 
+     <a href="#gallery.html">GALLERY</a>
+     
+     <div class="menu-log">
+            <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">LOGIN</button>
+        </div>
+</div>
+
+
+     <!-- Body section -->
+    <div class = "body_sec" >
+        <section id="Content" >
+             
+      
+          <marquee behavior="alternate" ><font size="7" style="color: white"> <b>WELCOME TO GROOM AND GLOW</b></font></marquee>
+          <div class="book">
+   <form>
+ <fieldset>
+  <legend>Book Appointment</legend>
+  <label for="fname">Name</label>
+  <input type="text" id="name" name="fname"><br><br>
+  <label for="email">Email</label>
+     <input type="email" id="email" name="email"><br><br>
+     <label for="tel">Moblie</label>
+    <input type="tel" id="tel" name="tel"><br><br>
+  <label for="date">Date</label>
+ <input type="date" id="date" name="date"><br><br>
+      <label for="services">Service</label>
+      <select name="services" id="services" class="select">
+    <option value="spa">Spa</option>
+    <option value="haircut">Hair Cut</option>
+    <option value="grooming">Grooming</option>
+    <option value="facial">Facial</option>
+     <option value="manicure">Manicure</option>
+    <option value="pedicure">Pedicure</option>
+  </select>
+  <br><br>
+     
+  <label for="time">Time</label>
+  <input type="time" id="time" name="time"><br><br>
+   </fieldset>
+       <fieldset>
+           <legend>FeedBack</legend>
+           <label for="rate">RateUs</label>
+           <progress id="rate" value="20" max="100" style="color: darkblue" class="progress"> 20%</progress><br><br>
+           <label for="comments">Comments</label>
+           <textarea class="textarea"> </textarea><br><br>
+           <label>Visit Again?</label>
+        <input type="radio" id="yes" name="visit" value="yes">
+  <label for="yes">Yes</label>
+  <input type="radio" id="no" name="visit" value="no">
+  <label for="no">No</label><br><br>
+ <label for="preference">Preference</label>
+ <input type="checkbox" id=hair name="Preference" value="Hair">
+<label for="hair"> Hair</label>
+<input type="checkbox" id="face" name="Preference" value="Face">
+<label for="face"> Face</label>
+<input type="checkbox" id="other" name="Preference" value="other">
+<label for="other"> All</label><br>
+       </fieldset>
+   <center> <input type="submit" value="Book"></center>
+      
+</form>
+          </div>
+            
+            
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text1" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password1" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+       </section> 
+            
+    </div>
+     <!-- Footer Section -->
+    <footer>
+        <p><center><b>&copy;GROOM AND GLOW 2020</b></center></p></footer>
+</body>
+</html>

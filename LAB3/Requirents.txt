@@ -1,0 +1,14 @@
+ALIGN ALL INPUT TYPES
+ADD GALLERY [use button group] then [siledshow]
+ADD SEARCH BAR
+SERVICES
+GIVE HAIRSPA(WHEN I click hairspa it should open hairspa dowb already same for all]
+GIVE BODYSPA
+GIVE WOMEN
+GIVE MEN
+GIVE KIDS
+Then add cart 
+then images with rates and things
+when hair cut is selcted add to the cart 
+and then finally show the bill recpit
+and one more online payment
